@@ -35,21 +35,28 @@
 				myButton.appendChild(myButtonText);
 				
 				myButton.style.backgroundColor = 'red';
-				
 				myButton.style.height = '40px';
 				myButton.style.width = '100px';
-				
+				//Hooray Jeff!
+				myButton.style.marginLeft = '43%';
+				myButton.style.marginRight = '45%';
 				document.body.appendChild(myButton);
+				myButton.addEventListener("click",createSquare);
 			}
 			
 			function createSquare() {
 				var mySquare = document.createElement('div');
-				mySquare.style.height = '200px';
-				mySquare.style.width = '200px';
+				mySquare.style.height = '99px';
+				mySquare.style.width = '99px';
 				mySquare.style.backgroundColor = 'black';
-				
-				document.body.appendChild(mySquare).onclick;
+				mySquare.style.margin = '5px';
+				mySquare.style.cssFloat = 'left';
+				document.body.appendChild(mySquare);
 			}
+			
+			
+			
+			
 		</script>
 	</head>
 	<body>
