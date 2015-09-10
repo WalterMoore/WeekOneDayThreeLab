@@ -3,7 +3,53 @@
 	<head>
 		<link rel="stylesheet" href="styles.css">
 		<script>
-			//JS Goes Here
+
+
+			document.addEventListener("DOMContentLoaded", createButton);
+			
+			
+			/*code from example
+			function go() {
+				/*var val1 = document.getElementById('val1');
+				var val2 = document.getElementById('val2');
+				print(add(parseInt(val1.value), parseInt(val2.value)));
+				var results = document.body;
+				results.innerHTML = '';
+				results.appendChild(createColoredDiv('red'));
+				results.appendChild(createColoredDiv('blue'));
+				results.appendChild(createColoredDiv('pink'));
+			}
+						
+			function createColoredDiv(color) {
+				var div = document.createElement('div');
+				div.innerText = 'Hello World!';
+				div.style.fontSize = '50px';
+				div.style.color = color;
+				
+				return div;
+			}*/
+			
+			function createButton() {
+				var myButton = document.createElement('button');
+				var myButtonText = document.createTextNode('Click Me');			
+				myButton.appendChild(myButtonText);
+				
+				myButton.style.backgroundColor = 'red';
+				
+				myButton.style.height = '40px';
+				myButton.style.width = '100px';
+				
+				document.body.appendChild(myButton);
+			}
+			
+			function createSquare() {
+				var mySquare = document.createElement('div');
+				mySquare.style.height = '200px';
+				mySquare.style.width = '200px';
+				mySquare.style.backgroundColor = 'black';
+				
+				document.body.appendChild(mySquare).onclick;
+			}
 		</script>
 	</head>
 	<body>
