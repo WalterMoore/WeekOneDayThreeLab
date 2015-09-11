@@ -34,7 +34,7 @@
 				var myButtonText = document.createTextNode('Click Me');			
 				myButton.appendChild(myButtonText);
 				
-				myButton.style.backgroundColor = 'red';
+				myButton.style.backgroundColor = '#BF5700';
 				myButton.style.height = '40px';
 				myButton.style.width = '100px';
 				//Hooray Jeff!
@@ -53,9 +53,13 @@
 				mySquare.style.cssFloat = 'left';
 				document.body.appendChild(mySquare);
 				mySquare.addEventListener("click",changeColor);
+				//Yay Stack Overflow & Alsciende!
 					function changeColor() {
-						mySquare.style.backgroundColor = 'blue';	
-					}
+  						function c() {
+  						  	return Math.floor(Math.random()*256).toString(16)
+  						}
+					mySquare.style.backgroundColor = "#"+c()+c()+c();
+				}
 			}
 			
 
