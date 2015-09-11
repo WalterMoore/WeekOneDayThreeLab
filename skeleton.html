@@ -6,7 +6,7 @@
 
 
 			document.addEventListener("DOMContentLoaded", createButton);
-			
+			/*thought for tonight's coding: use similar commands for color os squares as for creating squares*/
 			
 			/*code from example
 			function go() {
@@ -52,8 +52,13 @@
 				mySquare.style.margin = '5px';
 				mySquare.style.cssFloat = 'left';
 				document.body.appendChild(mySquare);
+				mySquare.addEventListener("click",changeColor);
+					function changeColor() {
+						mySquare.style.backgroundColor = 'blue';	
+					}
 			}
 			
+
 			
 			
 			
