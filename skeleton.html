@@ -48,7 +48,7 @@
 			
 			function createSquare() {
 				var mySquare = document.createElement('div');
-				mySquare.className = 'square';
+				//mySquare.className = 'square';
 				mySquare.style.height = '99px';
 				mySquare.style.width = '99px';
 				mySquare.style.backgroundColor = 'black';
@@ -66,10 +66,10 @@
 				}*/
 				
 				//following 4 lines borrowed from Steve
-				mySquare.id = document.getElementsByClassName('square').length;
+				/*mySquare.id = document.getElementsByClassName('square').length;
             	mySquare.addEventListener("mouseover", numberAppear);
             	mySquare.addEventListener("mouseout", numberDisappear);
-            	mySquare.addEventListener("dblclick", removeElement);
+            	mySquare.addEventListener("dblclick", removeElement);*/
 				
 				
 				mySquare.addEventListener("click",changeColor);
