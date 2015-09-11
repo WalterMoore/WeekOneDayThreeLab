@@ -45,8 +45,10 @@
 				myButton.addEventListener("click",createSquare);
 			}
 			
+			
 			function createSquare() {
 				var mySquare = document.createElement('div');
+				mySquare.className = 'square';
 				mySquare.style.height = '99px';
 				mySquare.style.width = '99px';
 				mySquare.style.backgroundColor = 'black';
@@ -59,11 +61,16 @@
 					function showNumber() {
 						var myDivNumber = document.createTextNode('mySquareId');
 						mySquare.appendChild(mySquareId);
-					}*/
-					
-				/* for (var i = 0; 1 <1000; i++){
-					--assign i to mySquareId--
+					}
+				for (var i = 0; i <'1000'; i++){	
 				}*/
+				
+				//following 4 lines borrowed from Steve
+				mySquare.id = document.getElementsByClassName('square').length;
+            	mySquare.addEventListener("mouseover", numberAppear);
+            	mySquare.addEventListener("mouseout", numberDisappear);
+            	mySquare.addEventListener("dblclick", removeElement);
+				
 				
 				mySquare.addEventListener("click",changeColor);
 				//Yay Stack Overflow & Alsciende!
@@ -77,7 +84,7 @@
 				/*on doubleclick, use boolean and modulo to see if mySquareId is even.
 					If true, removeChild of next element with id > this element.
 					If false, removeChild of immediate prior element with id < this element.
-					If such elements do not exist (in array?) give alert that they do not exist.
+					If such elements do not exist (in array?) give alert that they do not exist.*/
 				
 			}
 			
