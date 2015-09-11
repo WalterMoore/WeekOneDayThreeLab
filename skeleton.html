@@ -53,12 +53,18 @@
 				mySquare.style.margin = '5px';
 				mySquare.style.cssFloat = 'left';
 				document.body.appendChild(mySquare);
-				/*var mySquareId = '4';//4 is a placeholder for increasing number
+				
+				/*var mySquareId = i
 				mySquare.addEventListener("onMouseHover",showNumber);
 					function showNumber() {
 						var myDivNumber = document.createTextNode('mySquareId');
 						mySquare.appendChild(mySquareId);
 					}*/
+					
+				/* for (var i = 0; 1 <1000; i++){
+					--assign i to mySquareId--
+				}*/
+				
 				mySquare.addEventListener("click",changeColor);
 				//Yay Stack Overflow & Alsciende!
 					function changeColor() {
@@ -67,6 +73,12 @@
   						}
 					mySquare.style.backgroundColor = "#"+c()+c()+c();
 				}
+				
+				/*on doubleclick, use boolean and modulo to see if mySquareId is even.
+					If true, removeChild of next element with id > this element.
+					If false, removeChild of immediate prior element with id < this element.
+					If such elements do not exist (in array?) give alert that they do not exist.
+				
 			}
 			
 
