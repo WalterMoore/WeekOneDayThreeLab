@@ -31,12 +31,15 @@
 			
 			function createButton() {
 				var myButton = document.createElement('button');
-				var myButtonText = document.createTextNode('Click Me');			
+				var myButtonText = document.createTextNode('Click Me');	
+						
 				myButton.appendChild(myButtonText);
 				
 				myButton.style.backgroundColor = '#BF5700';
 				myButton.style.height = '40px';
 				myButton.style.width = '100px';
+				myButton.style.fontSize = '20px';
+				//myBottonText.style.color = 'white';
 				//Hooray Jeff!
 				myButton.style.marginLeft = '43%';
 				myButton.style.marginRight = '45%';
@@ -49,6 +52,7 @@
 			function createSquare() {
 				var mySquare = document.createElement('div');
 				var p = document.createElement("p");
+
 				mySquare.className = 'square';
 				mySquare.addEventListener("click",changeColor);
 				function changeColor() {
@@ -62,6 +66,8 @@
 				mySquare.style.backgroundColor = 'black';
 				mySquare.style.margin = '5px';
 				mySquare.style.cssFloat = 'left';
+				mySquare.style.fontSize = '40px';
+
 				document.body.appendChild(p);
 				document.body.appendChild(mySquare);
 				
@@ -70,11 +76,15 @@
             	mySquare.addEventListener("mouseout", numberDisappear);
             	mySquare.addEventListener("dblclick", removeElement);
 			}
+			
+
 //Thanks to Steve for suggestions
 			function numberAppear(e){
 				var square = e.target;
 				var t = document.createTextNode(square.id);
 				square.appendChild(t);
+				p.style.color = 'red';
+				p.style.fontSize = '20px';
 			}
 			
 			function numberDisappear(e){
@@ -83,6 +93,7 @@
 			}
 			
 			function removeElement(){
+				
 				var square = document.getElementsByClassName('square');
 				if (square) even = removeElement.nextSibling;
 				else {
