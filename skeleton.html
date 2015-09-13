@@ -48,15 +48,48 @@
 			
 			function createSquare() {
 				var mySquare = document.createElement('div');
-				//mySquare.className = 'square';
+				var p = document.createElement("p");
+				mySquare.className = 'square';
+				mySquare.addEventListener("click",changeColor);
+				function changeColor() {
+  					function c() {
+  						  return Math.floor(Math.random()*256).toString(16)
+  					}
+				mySquare.style.backgroundColor = "#"+c()+c()+c();
+				}
 				mySquare.style.height = '99px';
 				mySquare.style.width = '99px';
 				mySquare.style.backgroundColor = 'black';
 				mySquare.style.margin = '5px';
 				mySquare.style.cssFloat = 'left';
+				document.body.appendChild(p);
 				document.body.appendChild(mySquare);
 				
-				/*var mySquareId = i
+				mySquare.id = document.getElementsByClassName('square').length;
+            	mySquare.addEventListener("mouseover", numberAppear);
+            	mySquare.addEventListener("mouseout", numberDisappear);
+            	mySquare.addEventListener("dblclick", removeElement);
+			}
+//Thanks to Steve for suggestions
+			function numberAppear(e){
+				var square = e.target;
+				var t = document.createTextNode(square.id);
+				square.appendChild(t);
+			}
+			
+			function numberDisappear(e){
+				var square = e.target;
+				square.firstChild.remove();
+			}
+			
+			function removeElement(){
+				var square = document.getElementsByClassName('square');
+				if (square) even = removeElement.nextSibling;
+				else {
+					e.target.removeElement.previousSibling;
+				}
+			}
+			/*var mySquareId = i
 				mySquare.addEventListener("onMouseHover",showNumber);
 					function showNumber() {
 						var myDivNumber = document.createTextNode('mySquareId');
@@ -65,28 +98,13 @@
 				for (var i = 0; i <'1000'; i++){	
 				}*/
 				
-				//following 4 lines borrowed from Steve
-				/*mySquare.id = document.getElementsByClassName('square').length;
-            	mySquare.addEventListener("mouseover", numberAppear);
-            	mySquare.addEventListener("mouseout", numberDisappear);
-            	mySquare.addEventListener("dblclick", removeElement);*/
-				
-				
-				mySquare.addEventListener("click",changeColor);
-				//Yay Stack Overflow & Alsciende!
-					function changeColor() {
-  						function c() {
-  						  	return Math.floor(Math.random()*256).toString(16)
-  						}
-					mySquare.style.backgroundColor = "#"+c()+c()+c();
-				}
 				
 				/*on doubleclick, use boolean and modulo to see if mySquareId is even.
 					If true, removeChild of next element with id > this element.
 					If false, removeChild of immediate prior element with id < this element.
 					If such elements do not exist (in array?) give alert that they do not exist.*/
 				
-			}
+
 			
 
 			
