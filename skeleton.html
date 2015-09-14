@@ -94,15 +94,34 @@
 				var square = e.target;
 				square.firstChild.remove();
 			}
-			
-			function removeElement(){
+			//Thanks to Tyler for suggestions
+			function removeElement(e) {
+    			var divIDNum = parseInt(e.target.id);
+    			if (divIDNum % 2 === 0) {
+        		 if(e.target.previousSibling === null){
+            	alert("He's dead, Jim.");
+        		}
+       	 		else {
+               		e.target.previousSibling.remove();
+        		}
+   			}
+   				else if (e.target.nextSibling === null){
+           		alert("There's nobody left on that side.");  
+   			}
+   				else {
+       			e.target.nextSibling.remove();
+   			}    
+		}
+
+
+			/*function removeElement(){
 				
 				var square = document.getElementsByClassName('square');
 				if (square) even = removeElement.nextSibling;
 				else {
 					e.target.removeElement.previousSibling;
 				}
-			}
+			}*/
 			/*var mySquareId = i
 				mySquare.addEventListener("onMouseHover",showNumber);
 					function showNumber() {
